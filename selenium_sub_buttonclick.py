@@ -29,4 +29,5 @@ obj.accept()
 
 print("Clicked on the OK Button in the Alert Window")
 
-driver.close
+# Closes web page
+driver.close()
