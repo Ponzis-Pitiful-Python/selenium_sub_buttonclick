@@ -1,0 +1,98 @@
+<html>
+<head>
+ <title>selenium test page</title>
+<style>
+#headtext {
+  font-weight: bold;
+  color: black;
+  font-size: 500%;
+  background-color: transparent;
+  border-radius: 2px;
+  padding: 10px;
+  text-shadow: 2px 2px 5px;
+}
+
+body { background-image: url("paisley01.jpg") }
+.daDiv {
+	background-color: #e5e4e4;
+	padding: 10px;
+	border-radius: 25px;
+	border-style: solid;
+	border-width: 1px;
+	font-size: larger;
+}
+
+.theRadio {
+	float: left;
+	margin: 5px;
+}
+.theTextarea {
+	float: left;
+	margin: 5px;
+	display: inline-block;
+}
+#clearfloat {
+	clear:both;
+	margin: 5px;
+}
+</style>
+</head>
+<body>
+<br>
+<center><span id="headtext">Selenium Playground!</span></center>
+<br>
+
+<div class="daDiv" style="display: inline-block; margin: 5px; border-radius: 15px;"><a href="https://github.com/Ponzis-Pitiful-Python">PonzisPython</a></div>
+<br>
+<form>
+<div style="float: left; margin: 5px;" class="daDiv"><br>
+
+<b>Which insect would you most like to see go extinct?</b><br>
+<input type="radio" name="bugs" value="Cockroach"> Cockroach<br>
+<input type="radio" name="bugs" value="Wasp"> Wasp<br>
+<input type="radio" name="bugs" value="Bedbug"> Bedbug<br>
+<input type="radio" name="bugs" value="Mosquito"> Mosquito<br>
+</div>
+
+<textarea id="daText" class="theTextarea" rows="8" cols="20">
+&nbsp;
+</textarea>
+
+<div class="daDiv" style="width: 365px; text-align: center; clear:both;
+	margin: 5px;">
+<p style="padding-top: 0px;"><b>Click the button to display an alert box.</b></p>
+<input type="button" name="a_box" value="Alert Box" onclick="myFunction()">
+
+<script>
+function myFunction() {
+    alert("Hello! I am an alert box!");
+}
+</script>
+</div>
+<br>
+<div style="float: left; margin: 5px; display: inline-block;" class="daDiv">
+Pick a color:
+<select id="daColors" onchange="daFunction()">
+<option></option>
+	<option value="red">Red</option>
+	<option value="green">Green</option>
+	<option value="blue">Blue</option>
+</select>
+<p><input type="text" id="demo" size="20"></p>
+<script>
+function daFunction() {
+  var mylist = document.getElementById("daColors");
+  document.getElementById("demo").value = mylist.options[mylist.selectedIndex].text;
+}
+</script>
+
+</div>
+
+<!--
+<div style="float: left; margin: 5px;" class="daDiv" name="theBoxx">
+The Box<br><br>
+</div>
+-->
+</form>
+</body>
+</html> 
